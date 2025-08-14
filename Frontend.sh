@@ -18,6 +18,8 @@ systemctl start nginx
 
 rm -rf /usr/share/nginx/html/*
 
+rm -f /tmp/frontend.zip
+
 # Download the frontend content
 
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
@@ -26,6 +28,9 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
+# Restart Nginx Service to load the changes of the configuration
+
+systemctl restart nginx
 
 
 

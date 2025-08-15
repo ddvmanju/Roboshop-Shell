@@ -16,6 +16,7 @@ cd /app
 unzip /tmp/$app_name.zip
 
 cp $dir_path/$app_name.service /etc/systemd/system/$app_name.service
+
 systemctl daemon-reload
 systemctl enable $app_name
 systemctl start $app_name

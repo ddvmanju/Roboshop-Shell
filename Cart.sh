@@ -1,4 +1,5 @@
 source ./common.sh
+app_name=cart
 #Install NodeJS
 NODEJS
 
@@ -7,18 +8,13 @@ NODEJS
 cp cart.service /etc/systemd/system/cart.service
 
 #Add application User
-useradd roboshop
-
-rm -rf /app
+NODEJS
 #Lets setup an app directory.
-mkdir /app
-rm -f /tmp/cart.zip
+NODEJS
 
 #Download the application code to created app directory.
 
-curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
-cd /app
-unzip /tmp/cart.zip
+NODEJS
 
 #Lets download the dependencies.
 cd /app

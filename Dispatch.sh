@@ -1,18 +1,15 @@
+source ./common.sh
+app_name=dispatch
 #Install GoLang
 dnf install golang -y
 cp dispatch.service /etc/systemd/system/dispatch.service
 #Add application User
-useradd roboshop
-
-rm -rf /app
+NODEJS
 #Lets setup an app directory.
-mkdir /app
-rm -f /tmp/dispatch.zip
+NODEJS
 
 #Download the application code to created app directory.
-curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch-v3.zip
-cd /app
-unzip /tmp/dispatch.zip
+NODEJS
 
 #Lets download the dependencies.
 cd /app

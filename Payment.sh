@@ -1,19 +1,18 @@
+source ./common.sh
+app_name=payment
+
 #Install Python 3
 dnf install python3 gcc python3-devel -y
 cp payment.service /etc/systemd/system/payment.service
 
 #Add application User
-useradd roboshop
+NODEJS
 
 #Lets setup an app directory.
-rm -rf /app
-mkdir /app
-rm -f /tmp/payment.zip
+NODEJS
 
 #Download the application code to created app directory.
-curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment-v3.zip
-cd /app
-unzip /tmp/payment.zip
+NODEJS
 
 #Lets download the dependencies.
 cd /app

@@ -11,14 +11,11 @@ useradd roboshop
 
 
 #Lets setup an app directory.
-rm -rf /app
-mkdir /app
+NODEJS
 
-rm -f /tmp/$app_name.zip
+NODEJS
 #Download the application code to created app directory.
-curl -o /tmp/$app_name.zip https://roboshop-artifacts.s3.amazonaws.com/$app_name-v3.zip
-cd /app
-unzip /tmp/$app_name.zip
+NODEJS
 
 #Lets download the dependencies.
 cd /app

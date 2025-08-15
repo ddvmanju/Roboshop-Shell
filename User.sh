@@ -1,21 +1,19 @@
 source ./common.sh
+app_name=user
 #Install NodeJS
 NODEJS
 
-cp user.service /etc/systemd/system/user.service
+cp user.service /etc/systemd/system/$app_name.service
 
 #Add application User
-useradd roboshop
+NODEJS
 
 #Lets setup an app directory.
-mkdir /app
-rm -f /tmp/user.zip
+NODEJS
 
 #Download the application code to created app directory.
 
-curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user-v3.zip
-cd /app
-unzip /tmp/user.zip
+NODEJS
 
 #Lets download the dependencies.
 

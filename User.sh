@@ -1,7 +1,6 @@
+source ./common.sh
 #Install NodeJS
-dnf module disable nodejs -y
-dnf module enable nodejs:20 -y
-dnf install nodejs -y
+NODEJS
 
 cp user.service /etc/systemd/system/user.service
 

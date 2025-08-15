@@ -1,9 +1,8 @@
+source ./common.sh
 app_name=catalogue
 
 # Install NodeJS
-dnf module disable nodejs -y
-dnf module enable nodejs:20 -y
-dnf install nodejs -y
+NODEJS
 
 cp $app_name.service /etc/systemd/system/$app_name.service
 cp mongo.repo /etc/yum.repos.d/mongo.repo

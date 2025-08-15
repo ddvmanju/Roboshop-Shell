@@ -8,8 +8,9 @@ cp mongo.repo /etc/yum.repos.d/mongo.repo
 #Add application User
 useradd roboshop
 
-rm -rf /app
+
 #Lets setup an app directory.
+#rm -rf /app
 mkdir /app
 
 rm -f /tmp/catalogue.zip

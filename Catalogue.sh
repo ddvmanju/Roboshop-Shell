@@ -32,4 +32,4 @@ dnf install mongodb-mongosh -y
 
 #Load Master Data of the List of products
 
-mongosh --host MONGODB-SERVER-IPADDRESS </app/db/master-data.js
+mongosh --host MongoDB-Dev.azdevops.online </app/db/master-data.js

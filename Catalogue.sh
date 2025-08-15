@@ -10,7 +10,7 @@ useradd roboshop
 
 
 #Lets setup an app directory.
-#rm -rf /app
+rm -rf /app
 mkdir /app
 
 rm -f /tmp/catalogue.zip

@@ -22,11 +22,10 @@ cd /app
 npm install
 
 #Load the service.
-systemctl daemon-reload
+NODEJS
 
 #Start the service.
-systemctl enable $app_name
-systemctl start $app_name
+NODEJS
 
 dnf install mongodb-mongosh -y
 

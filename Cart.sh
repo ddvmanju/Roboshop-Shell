@@ -3,9 +3,9 @@ app_name=cart
 #Install NodeJS
 NODEJS
 
+#Note: No need to write NODEJS that many times as below, for my understanding i mentioned it
 
-
-cp cart.service /etc/systemd/system/cart.service
+#cp cart.service /etc/systemd/system/cart.service
 
 #Add application User
 NODEJS
@@ -21,6 +21,4 @@ cd /app
 npm install
 
 #Load the service.
-systemctl daemon-reload
-systemctl enable user
-systemctl start user
+NODEJS

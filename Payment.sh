@@ -3,7 +3,7 @@ app_name=payment
 
 #Install Python 3
 dnf install python3 gcc python3-devel -y
-cp payment.service /etc/systemd/system/payment.service
+#cp payment.service /etc/systemd/system/payment.service
 
 #Add application User
 NODEJS
@@ -19,6 +19,4 @@ cd /app
 pip3 install -r requirements.txt
 
 #Load the service.
-systemctl daemon-reload
-systemctl enable payment
-systemctl start payment
+NODEJS

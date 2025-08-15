@@ -9,14 +9,14 @@ dnf install python3 gcc python3-devel -y
 NODEJS
 
 #Lets setup an app directory.
-NODEJS
+#NODEJS
 
 #Download the application code to created app directory.
-NODEJS
+#NODEJS
 
 #Lets download the dependencies.
 cd /app
 pip3 install -r requirements.txt
 
 #Load the service.
-NODEJS
+#NODEJS

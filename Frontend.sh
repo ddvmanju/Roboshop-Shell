@@ -15,7 +15,7 @@ systemctl start nginx
 
 
 # Remove the default content that web server is serving.
-
+rm -rf /app
 rm -rf /usr/share/nginx/html/*
 
 rm -f /tmp/frontend.zip

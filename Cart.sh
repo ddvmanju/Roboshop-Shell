@@ -8,6 +8,7 @@ cp cart.service /etc/systemd/system/cart.service
 #Add application User
 useradd roboshop
 
+rm -rf /app
 #Lets setup an app directory.
 mkdir /app
 rm -f /tmp/cart.zip

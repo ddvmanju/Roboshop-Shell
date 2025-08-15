@@ -5,6 +5,7 @@ cp shipping.service /etc/systemd/system/shipping.service
 useradd roboshop
 
 #Lets setup an app directory.
+rm -rf /app
 mkdir /app
 rm -f /tmp/shipping.zip
 

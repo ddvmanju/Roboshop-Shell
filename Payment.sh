@@ -6,6 +6,7 @@ cp payment.service /etc/systemd/system/payment.service
 useradd roboshop
 
 #Lets setup an app directory.
+rm -rf /app
 mkdir /app
 rm -f /tmp/payment.zip
 

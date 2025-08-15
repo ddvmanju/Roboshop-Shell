@@ -4,6 +4,7 @@ cp dispatch.service /etc/systemd/system/dispatch.service
 #Add application User
 useradd roboshop
 
+rm -rf /app
 #Lets setup an app directory.
 mkdir /app
 rm -f /tmp/dispatch.zip

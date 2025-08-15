@@ -23,6 +23,4 @@ cd /app
 npm install
 
 #Load the service.
-systemctl daemon-reload
-systemctl enable user
-systemctl start user
+NODEJS

@@ -12,4 +12,8 @@ rm -f /tmp/$app_name.zip
 curl -o /tmp/$app_name.zip https://roboshop-artifacts.s3.amazonaws.com/$app_name-v3.zip
 cd /app
 unzip /tmp/$app_name.zip
+
+systemctl daemon-reload
+systemctl enable $app_name
+systemctl start $app_name
 }

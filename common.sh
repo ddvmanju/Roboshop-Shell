@@ -1,52 +1,45 @@
 dir_path=$(pwd)
+log_file=/tmp/roboshop.log
 
 SYSTEMD_SETUP() {
-  cp $dir_path/$app_name.service /etc/systemd/system/$app_name.service
-
-  systemctl daemon-reload
-  systemctl enable $app_name
-  systemctl start $app_name
+  cp $dir_path/$app_name.service /etc/systemd/system/$app_name.service >$log_file
+  systemctl daemon-reload >$log_file
+  systemctl enable $app_name >$log_file
+  systemctl restart $app_name >$log_file
 }
 
 APP_PREREQ(){
-  useradd roboshop
-  rm -rf /app
-  mkdir /app
-
-  rm -f /tmp/$app_name.zip
-  #Download the application code to created app directory.
-  curl -o /tmp/$app_name.zip https://roboshop-artifacts.s3.amazonaws.com/$app_name-v3.zip
-  cd /app
-  unzip /tmp/$app_name.zip
+  useradd roboshop >$log_file
+  rm -rf /app >$log_file
+  mkdir /app >$log_file
+  rm -f /tmp/$app_name.zip >$log_file
+  curl -o /tmp/$app_name.zip https://roboshop-artifacts.s3.amazonaws.com/$app_name-v3.zip >$log_file
+  cd /app >$log_file
+  unzip /tmp/$app_name.zip >$log_file
 
 }
 
 NODEJS() {
-  dnf module disable nodejs -y
-  dnf module enable nodejs:20 -y
-  dnf install nodejs -y
-
-#Lets setup an app directory.
-  npm install
+  echo Disable Default NodeJS Version
+  dnf module disable nodejs -y >$log_file
+  dnf module enable nodejs:20 -y >$log_file
+  dnf install nodejs -y >$log_file
+  npm install >$log_file
   APP_PREREQ
   SYSTEMD_SETUP
 }
 
 JAVA() {
-  dnf install maven -y
-#cp $app_name.service /etc/systemd/system/$app_name.service
-
+  dnf install maven -y >$log_file
   APP_PREREQ
-  mvn clean package
-  mv target/$app_name-1.0.jar $app_name.jar
+  mvn clean package >$log_file
+  mv target/$app_name-1.0.jar $app_name.jar >$log_file
   SYSTEMD_SETUP
 }
 
 PYTHON() {
-
-#Install Python 3
-  dnf install python3 gcc python3-devel -y
+  dnf install python3 gcc python3-devel -y >$log_file
   APP_PREREQ
-  pip3 install -r requirements.txt
+  pip3 install -r requirements.txt >$log_file
   SYSTEMD_SETUP
 }

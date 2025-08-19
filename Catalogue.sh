@@ -4,6 +4,6 @@ app_name=catalogue
 # Install NodeJS
 NODEJS
 
-cp mongo.repo /etc/yum.repos.d/mongo.repo
+cp $(pwd)/mongo.repo /etc/yum.repos.d/mongo.repo
 dnf install mongodb-mongosh -y
 mongosh --host MongoDB-Dev.azdevops.online </app/db/master-data.js

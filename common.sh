@@ -8,9 +8,9 @@ SYSTEMD_SETUP() {
   echo Copy Application Service
   cp $dir_path/$app_name.service /etc/systemd/system/$app_name.service &>>$log_file
   if [ $? -eq 0 ]; then
-      echo "success"
+      echo -e "\e[32msuccess\e[0m"
   else
-      echo "failure"
+      echo -e "\e[31mfail\e[0m"
   fi
 
 
